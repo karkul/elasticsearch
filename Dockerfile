@@ -18,8 +18,8 @@ ENV REFRESHED_AT 2016-08-20
 ### install prerequisites (cURL, gosu)
 
 ENV GOSU_VERSION 1.8
+ENV DEBIAN_FRONTEND=noninteractive
 
-ARG DEBIAN_FRONTEND=noninteractive
 RUN set -x \
  && apt-get update -qq \
  && apt-get install -qqy --no-install-recommends ca-certificates curl \
